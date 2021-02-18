@@ -9,5 +9,6 @@ namespace WorkshopChatServer.Repositories.Interfaces
     {
         public Task<WorkshopChatServer.Types.User.User> GetUserByMessageId(Guid messageIds);
         public Task<WorkshopChatServer.Types.User.User> CreateUser(string userName);
+        Task<IReadOnlyDictionary<Guid, User>> GetUsersByMessageIds(IReadOnlyList<Guid> keys);
     }
 }

@@ -71,6 +71,20 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "HotChocolate.AspNetCore.Authorization/11.0.9": {
+        "type": "package",
+        "dependencies": {
+          "HotChocolate": "11.0.9",
+          "Microsoft.AspNetCore.Authorization": "3.1.0",
+          "Microsoft.Extensions.DependencyInjection": "3.1.0"
+        },
+        "compile": {
+          "lib/net5.0/HotChocolate.AspNetCore.Authorization.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/HotChocolate.AspNetCore.Authorization.dll": {}
+        }
+      },
       "HotChocolate.Execution/11.0.9": {
         "type": "package",
         "dependencies": {
@@ -271,6 +285,29 @@
           "lib/net5.0/HotChocolate.Validation.dll": {}
         }
       },
+      "Microsoft.AspNetCore.Authorization/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Metadata": "3.1.0",
+          "Microsoft.Extensions.Logging.Abstractions": "3.1.0",
+          "Microsoft.Extensions.Options": "3.1.0"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authorization.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authorization.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Metadata/3.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.dll": {}
+        }
+      },
       "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
         "type": "package",
         "compile": {
@@ -311,6 +348,15 @@
         },
         "runtime": {
           "lib/netcoreapp2.0/Microsoft.Extensions.DiagnosticAdapter.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/3.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
         }
       },
       "Microsoft.Extensions.ObjectPool/3.1.0": {
@@ -530,6 +576,20 @@
         "lib/netcoreapp3.1/HotChocolate.AspNetCore.dll"
       ]
     },
+    "HotChocolate.AspNetCore.Authorization/11.0.9": {
+      "sha512": "8s4wzMCW9+FMkRClfod6xjgD68Jhx1oHY/0bPB89IdY/T9q1FU5jd+c5lrzV5gI9NC5+ExYkyyxa4Wpqb/V48Q==",
+      "type": "package",
+      "path": "hotchocolate.aspnetcore.authorization/11.0.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "hotchocolate.aspnetcore.authorization.11.0.9.nupkg.sha512",
+        "hotchocolate.aspnetcore.authorization.nuspec",
+        "lib/net5.0/HotChocolate.AspNetCore.Authorization.dll",
+        "lib/netcoreapp3.1/HotChocolate.AspNetCore.Authorization.dll",
+        "lib/netstandard2.0/HotChocolate.AspNetCore.Authorization.dll"
+      ]
+    },
     "HotChocolate.Execution/11.0.9": {
       "sha512": "rfg6cj0g0v+gM+RnTl2MNC2JLeTO0Wn8ZHgpD4iKfL9KH/5QLOEFGDfp0hPFCHvh1GOECKU0xUzV+fxn5X9mGg==",
       "type": "package",
@@ -726,6 +786,36 @@
         "lib/netstandard2.0/HotChocolate.Validation.dll"
       ]
     },
+    "Microsoft.AspNetCore.Authorization/3.1.0": {
+      "sha512": "R/0qFIu1m7jJFD0OuLIjLXC0uYQxFwwW7ylVvGgUPUpOJJK0bKJjfrDu20kY1Yw0hy9ejZYZEdUZHRm3ei0+3w==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authorization/3.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Authorization.dll",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Authorization.xml",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.xml",
+        "microsoft.aspnetcore.authorization.3.1.0.nupkg.sha512",
+        "microsoft.aspnetcore.authorization.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Metadata/3.1.0": {
+      "sha512": "ZiNCjglz4kR2OGElM2u/S6cS1ArAxE6lP4BeniCZcr6l+ACzslKgcPGOTY8/Glppx6CDzMKfmyqV+VbFh5CyjQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.metadata/3.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.xml",
+        "microsoft.aspnetcore.metadata.3.1.0.nupkg.sha512",
+        "microsoft.aspnetcore.metadata.nuspec"
+      ]
+    },
     "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
       "sha512": "1Am6l4Vpn3/K32daEqZI+FFr96OlZkgwK2LcT3pZ2zWubR5zTPW3/FkO1Rat9kb7oQOa4rxgl9LJHc5tspCWfg==",
       "type": "package",
@@ -799,6 +889,20 @@
         "lib/netstandard2.0/Microsoft.Extensions.DiagnosticAdapter.xml",
         "microsoft.extensions.diagnosticadapter.3.1.0.nupkg.sha512",
         "microsoft.extensions.diagnosticadapter.nuspec",
+        "packageIcon.png"
+      ]
+    },
+    "Microsoft.Extensions.Logging.Abstractions/3.1.0": {
+      "sha512": "jjo4YXRx6MIpv6DiRxJjSpl+sPP0+5VW0clMEdLyIAz44PPwrDTFrd5PZckIxIXl1kKZ2KK6IL2nkt0+ug2MQg==",
+      "type": "package",
+      "path": "microsoft.extensions.logging.abstractions/3.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.xml",
+        "microsoft.extensions.logging.abstractions.3.1.0.nupkg.sha512",
+        "microsoft.extensions.logging.abstractions.nuspec",
         "packageIcon.png"
       ]
     },
@@ -1234,6 +1338,7 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "HotChocolate.AspNetCore >= 11.0.9",
+      "HotChocolate.AspNetCore.Authorization >= 11.0.9",
       "dapper >= 2.0.78",
       "npgsql >= 5.0.3"
     ]
@@ -1280,6 +1385,10 @@
         "targetAlias": "net5.0",
         "dependencies": {
           "HotChocolate.AspNetCore": {
+            "target": "Package",
+            "version": "[11.0.9, )"
+          },
+          "HotChocolate.AspNetCore.Authorization": {
             "target": "Package",
             "version": "[11.0.9, )"
           },

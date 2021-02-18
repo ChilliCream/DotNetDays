@@ -45,6 +45,10 @@
               "target": "Package",
               "version": "[11.0.9, )"
             },
+            "HotChocolate.AspNetCore.Authorization": {
+              "target": "Package",
+              "version": "[11.0.9, )"
+            },
             "dapper": {
               "target": "Package",
               "version": "[2.0.78, )"

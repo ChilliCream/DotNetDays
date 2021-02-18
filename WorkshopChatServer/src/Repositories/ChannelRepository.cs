@@ -46,5 +46,25 @@ VALUES (@name, @belongsToWorkspace);",
                 Name =  channelName
             };
         }
+
+        class DataLoaderResult
+        {
+            public string Name { get; set; }
+            public string WorkspaceName { get; set; }
+        }
+        public async Task<ILookup<String, Channel>> GetChannelsByWorkspaces(IReadOnlyList<String> keys)
+        {
+            await using var conn = new NpgsqlConnection(ConnString);
+            await conn.OpenAsync();
+
+            var result = await conn.QueryAsync<DataLoaderResult>("select name as \"Name\", belongsToWorkspace as \"WorkspaceName\" from channel where belongsToWorkspace = any(@keys)",
+                new
+                {
+                    keys = keys,
+                }
+            );
+
+            return result.ToLookup(x => x.WorkspaceName, x => new Channel(){Name = x.Name});
+        }
     }
 }

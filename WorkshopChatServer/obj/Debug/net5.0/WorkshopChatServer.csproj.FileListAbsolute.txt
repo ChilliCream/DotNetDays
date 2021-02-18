@@ -66,3 +66,4 @@
 /Users/fred/projects/open-source/hotchocolate/live-workshop/DotNetDays/WorkshopChatServer/obj/Debug/net5.0/WorkshopChatServer.RazorTargetAssemblyInfo.cache
 /Users/fred/projects/open-source/hotchocolate/live-workshop/DotNetDays/WorkshopChatServer/obj/Debug/net5.0/WorkshopChatServer.csproj.CopyComplete
 /Users/fred/projects/open-source/hotchocolate/live-workshop/DotNetDays/WorkshopChatServer/obj/Debug/net5.0/WorkshopChatServer.genruntimeconfig.cache
+/Users/fred/projects/open-source/hotchocolate/live-workshop/DotNetDays/WorkshopChatServer/bin/Debug/net5.0/HotChocolate.AspNetCore.Authorization.dll

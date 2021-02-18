@@ -2,11 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="dapper" Version="2.0.78" />
     <PackageReference Include="HotChocolate.AspNetCore" Version="11.0.9" />
+    <PackageReference Include="HotChocolate.AspNetCore.Authorization" Version="11.0.9" />
     <PackageReference Include="npgsql" Version="5.0.3" />
   </ItemGroup>
 

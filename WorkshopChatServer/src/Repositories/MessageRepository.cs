@@ -252,5 +252,54 @@ namespace WorkshopChatServer.Repositories
                 _ => throw new ArgumentException()
             };
         }
+
+        public async Task<ILookup<String, IMessage>> GetMessagesByChannelNames(IReadOnlyList<String> keys)
+        {
+            await using var conn = new NpgsqlConnection(ConnString);
+            await conn.OpenAsync();
+
+            var result = await conn.QueryAsync<GetMessageSelectResult>(
+                @"
+            select 
+                id ""Id""
+                , createdat ""CreatedAt""
+                , discriminator ""Discriminator""
+                , content ""Content""
+                , createdbyuser ""UserId""
+                , belongstochannel ""BelongsToChannel""
+            from message
+            where belongstochannel = any(@keys) 
+            and id not in (select distinct startermessageid from message where startermessageid is not null)
+            and id not in (select responseid from threadresponses)
+            order by createdat desc;",
+                new
+                {
+                    keys = keys,
+                });
+
+            return result.Select<GetMessageSelectResult, IMessage>(
+                rawResult =>
+                {
+                    return rawResult.Discriminator switch
+                    {
+                        nameof(SimpleMessage) => new SimpleMessage()
+                        {
+                            Id = rawResult.Id,
+                            CreatedAt = rawResult.CreatedAt,
+                            UserId = rawResult.UserId,
+                            BelongsToChannel = rawResult.BelongsToChannel,
+                            Content = rawResult.Content
+                        },
+                        nameof(Thread) => new Thread()
+                        {
+                            Id = rawResult.Id,
+                            CreatedAt = rawResult.CreatedAt,
+                            BelongsToChannel = rawResult.BelongsToChannel,
+                            UserId = rawResult.UserId,
+                        },
+                        _ => throw new ArgumentException()
+                    };
+                }).ToList().ToLookup(x => x.BelongsToChannel, x => x);
+        }
     }
 }

@@ -1,6 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using System.Threading;
 using HotChocolate;
 using HotChocolate.Types;
 using HotChocolate.Types.Relay;
@@ -34,9 +35,9 @@ namespace WorkshopChatServer.Types.Message
         public string Content {get; set;}
 
         public async Task<UserNamespace.User> Author(
-            [Service] IUserRepository userRepository
+            [Service] UserNamespace.AuthorByMessageIdDataLoader userRepository
         ) {
-            return await userRepository.GetUserByMessageId(Id);
+            return await userRepository.LoadAsync(Id, CancellationToken.None);
         }
 
 
@@ -59,12 +60,10 @@ namespace WorkshopChatServer.Types.Message
             return messageRepository.GetThreadResponsesByThreadId(Id);
         }
 
-        public Task<UserNamespace.User> Author(
-            [Service] IUserRepository userRepository
+        public async Task<UserNamespace.User> Author(
+            [Service] UserNamespace.AuthorByMessageIdDataLoader userRepository
         ) {
-            return userRepository.GetUserByMessageId(Id);
+            return await userRepository.LoadAsync(Id, CancellationToken.None);
         }
-
-  
     }
 }

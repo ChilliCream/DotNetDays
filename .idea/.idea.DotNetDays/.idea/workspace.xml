@@ -5,29 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9f7046e-ecb0-4b83-b2b9-77a7bd48550b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/WorkshopChatServer/src/CustomHttpResultSerializer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DotNetDays/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DotNetDays/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WorkshopChatServer/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopChatServer/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkshopChatServer/WorkshopChatServer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopChatServer/WorkshopChatServer.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WorkshopChatServer/bin/Debug/net5.0/WorkshopChatServer.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopChatServer/bin/Debug/net5.0/WorkshopChatServer.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WorkshopChatServer/bin/Debug/net5.0/WorkshopChatServer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopChatServer/bin/Debug/net5.0/WorkshopChatServer.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WorkshopChatServer/bin/Debug/net5.0/WorkshopChatServer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopChatServer/bin/Debug/net5.0/WorkshopChatServer.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkshopChatServer/bin/Debug/net5.0/WorkshopChatServer.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopChatServer/bin/Debug/net5.0/WorkshopChatServer.runtimeconfig.dev.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WorkshopChatServer/bin/Debug/net5.0/ref/WorkshopChatServer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopChatServer/bin/Debug/net5.0/ref/WorkshopChatServer.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WorkshopChatServer/obj/Debug/net5.0/WorkshopChatServer.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopChatServer/obj/Debug/net5.0/WorkshopChatServer.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WorkshopChatServer/obj/Debug/net5.0/WorkshopChatServer.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopChatServer/obj/Debug/net5.0/WorkshopChatServer.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WorkshopChatServer/obj/Debug/net5.0/WorkshopChatServer.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopChatServer/obj/Debug/net5.0/WorkshopChatServer.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WorkshopChatServer/obj/Debug/net5.0/WorkshopChatServer.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopChatServer/obj/Debug/net5.0/WorkshopChatServer.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WorkshopChatServer/obj/Debug/net5.0/WorkshopChatServer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopChatServer/obj/Debug/net5.0/WorkshopChatServer.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkshopChatServer/obj/Debug/net5.0/WorkshopChatServer.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopChatServer/obj/Debug/net5.0/WorkshopChatServer.genruntimeconfig.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WorkshopChatServer/obj/Debug/net5.0/WorkshopChatServer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopChatServer/obj/Debug/net5.0/WorkshopChatServer.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WorkshopChatServer/obj/Debug/net5.0/ref/WorkshopChatServer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopChatServer/obj/Debug/net5.0/ref/WorkshopChatServer.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WorkshopChatServer/obj/WorkshopChatServer.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopChatServer/obj/WorkshopChatServer.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkshopChatServer/obj/WorkshopChatServer.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopChatServer/obj/WorkshopChatServer.csproj.nuget.g.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WorkshopChatServer/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopChatServer/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WorkshopChatServer/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopChatServer/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkshopChatServer/src/Channel/Channel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopChatServer/src/Channel/Channel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkshopChatServer/src/Channel/WorkspaceChannelExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopChatServer/src/Workspaces/WorkspaceChannelExtension.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WorkshopChatServer/src/Messages/Message.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopChatServer/src/Messages/Message.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkshopChatServer/src/Messages/MessagesMutation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopChatServer/src/Messages/MessagesMutation.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WorkshopChatServer/src/Repositories/ChannelRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopChatServer/src/Repositories/ChannelRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkshopChatServer/src/Repositories/Interfaces/IChannelRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopChatServer/src/Repositories/Interfaces/IChannelRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkshopChatServer/src/Repositories/Interfaces/IMessageRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopChatServer/src/Repositories/Interfaces/IMessageRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkshopChatServer/src/Repositories/Interfaces/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopChatServer/src/Repositories/Interfaces/IUserRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WorkshopChatServer/src/Repositories/MessageRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopChatServer/src/Repositories/MessageRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkshopChatServer/src/Workspaces/Workspace.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopChatServer/src/Workspaces/Workspace.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkshopChatServer/src/Repositories/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopChatServer/src/Repositories/UserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkshopChatServer/src/User/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopChatServer/src/User/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkshopChatServer/src/User/UserMutation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopChatServer/src/User/UserMutation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkshopChatServer/src/Workspaces/WorkspaceMutation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WorkshopChatServer/src/Workspaces/WorkspaceMutation.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,11 +47,23 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/WorkshopChatServer/src/Messages/MessagesMutation.cs" />
-      <option value="$PROJECT_DIR$/WorkshopChatServer/src/Repositories/ChannelRepository.cs" />
       <option value="$PROJECT_DIR$/WorkshopChatServer/src/Workspaces/Workspace.cs" />
-      <option value="$PROJECT_DIR$/WorkshopChatServer/src/Repositories/MessageRepository.cs" />
-      <option value="$PROJECT_DIR$/WorkshopChatServer/src/Messages/Message.cs" />
+      <option value="$PROJECT_DIR$/WorkshopChatServer/src/User/UserMutation.cs" />
+      <option value="$PROJECT_DIR$/WorkshopChatServer/src/Workspaces/WorkspaceMutation.cs" />
+      <option value="$PROJECT_DIR$/WorkshopChatServer/WorkshopChatServer.csproj" />
+      <option value="$PROJECT_DIR$/WorkshopChatServer/src/CustomRequestSerializer.cs" />
+      <option value="$PROJECT_DIR$/WorkshopChatServer/src/CustomHttpResultSerializer.cs" />
+      <option value="$PROJECT_DIR$/WorkshopChatServer/src/Repositories/Interfaces/IChannelRepository.cs" />
+      <option value="$PROJECT_DIR$/WorkshopChatServer/src/Repositories/Interfaces/IMessageRepository.cs" />
+      <option value="$PROJECT_DIR$/WorkshopChatServer/src/User/User.cs" />
+      <option value="$PROJECT_DIR$/WorkshopChatServer/src/Repositories/Interfaces/IUserRepository.cs" />
       <option value="$PROJECT_DIR$/WorkshopChatServer/Startup.cs" />
+      <option value="$PROJECT_DIR$/WorkshopChatServer/src/Repositories/ChannelRepository.cs" />
+      <option value="$PROJECT_DIR$/WorkshopChatServer/src/Repositories/UserRepository.cs" />
+      <option value="$PROJECT_DIR$/WorkshopChatServer/src/Workspaces/WorkspaceChannelExtension.cs" />
+      <option value="$PROJECT_DIR$/WorkshopChatServer/src/Channel/Channel.cs" />
+      <option value="$PROJECT_DIR$/WorkshopChatServer/src/Messages/Message.cs" />
+      <option value="$PROJECT_DIR$/WorkshopChatServer/src/Repositories/MessageRepository.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1oeZJZXJLMKxa4FCpquun3f5BBA" />
@@ -53,10 +72,19 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34975636" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -87,7 +115,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1613648946511</updated>
-      <workItem from="1613648955749" duration="608000" />
+      <workItem from="1613648955749" duration="3819000" />
     </task>
     <servers />
   </component>
@@ -96,6 +124,17 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

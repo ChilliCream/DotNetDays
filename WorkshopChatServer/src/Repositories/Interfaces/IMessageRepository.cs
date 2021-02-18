@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using WorkshopChatServer.Types.Message;
 
@@ -13,5 +14,6 @@ namespace WorkshopChatServer.Repositories.Interfaces
 
         public Task<SimpleMessage> PostSimpleMessage(string channelName, string userName, string message);
         public Task<Thread> ReplyToMessage(Guid messageId, string message);
+        Task<ILookup<String, IMessage>> GetMessagesByChannelNames(IReadOnlyList<string> keys);
     }
 }

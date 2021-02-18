@@ -26,6 +26,7 @@
       "WorkshopChatServer/1.0.0": {
         "dependencies": {
           "HotChocolate.AspNetCore": "11.0.9",
+          "HotChocolate.AspNetCore.Authorization": "11.0.9",
           "Dapper": "2.0.78",
           "Npgsql": "5.0.3",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
@@ -34,7 +35,7 @@
           "Microsoft.AspNetCore.Authentication.Core": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.OAuth": "5.0.0.0",
-          "Microsoft.AspNetCore.Authorization": "5.0.0.0",
+          "Microsoft.AspNetCore.Authorization.Reference": "5.0.0.0",
           "Microsoft.AspNetCore.Authorization.Policy": "5.0.0.0",
           "Microsoft.AspNetCore.Components.Authorization": "5.0.0.0",
           "Microsoft.AspNetCore.Components": "5.0.0.0",
@@ -69,7 +70,7 @@
           "Microsoft.AspNetCore.Identity": "5.0.0.0",
           "Microsoft.AspNetCore.Localization": "5.0.0.0",
           "Microsoft.AspNetCore.Localization.Routing": "5.0.0.0",
-          "Microsoft.AspNetCore.Metadata": "5.0.0.0",
+          "Microsoft.AspNetCore.Metadata.Reference": "5.0.0.0",
           "Microsoft.AspNetCore.Mvc.Abstractions": "5.0.0.0",
           "Microsoft.AspNetCore.Mvc.ApiExplorer": "5.0.0.0",
           "Microsoft.AspNetCore.Mvc.Core": "5.0.0.0",
@@ -135,7 +136,7 @@
           "Microsoft.Extensions.Identity.Stores": "5.0.0.0",
           "Microsoft.Extensions.Localization.Abstractions": "5.0.0.0",
           "Microsoft.Extensions.Localization": "5.0.0.0",
-          "Microsoft.Extensions.Logging.Abstractions": "5.0.0.0",
+          "Microsoft.Extensions.Logging.Abstractions.Reference": "5.0.0.0",
           "Microsoft.Extensions.Logging.Configuration": "5.0.0.0",
           "Microsoft.Extensions.Logging.Console": "5.0.0.0",
           "Microsoft.Extensions.Logging.Debug": "5.0.0.0",
@@ -395,6 +396,22 @@
           "lib/net5.0/HotChocolate.AspNetCore.dll": {}
         }
       },
+      "HotChocolate.AspNetCore.Authorization/11.0.9": {
+        "dependencies": {
+          "HotChocolate": "11.0.9",
+          "Microsoft.AspNetCore.Authorization": "3.1.0",
+          "Microsoft.Extensions.DependencyInjection": "3.1.0"
+        },
+        "runtime": {
+          "lib/net5.0/HotChocolate.AspNetCore.Authorization.dll": {
+            "assemblyVersion": "11.0.9.0",
+            "fileVersion": "11.0.9.0"
+          }
+        },
+        "compile": {
+          "lib/net5.0/HotChocolate.AspNetCore.Authorization.dll": {}
+        }
+      },
       "HotChocolate.Execution/11.0.9": {
         "dependencies": {
           "HotChocolate.Abstractions": "11.0.9",
@@ -623,6 +640,14 @@
           "lib/net5.0/HotChocolate.Validation.dll": {}
         }
       },
+      "Microsoft.AspNetCore.Authorization/3.1.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Metadata": "3.1.0",
+          "Microsoft.Extensions.Logging.Abstractions": "3.1.0",
+          "Microsoft.Extensions.Options": "3.1.0"
+        }
+      },
+      "Microsoft.AspNetCore.Metadata/3.1.0": {},
       "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
         "runtime": {
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
@@ -654,6 +679,7 @@
           "lib/netcoreapp2.0/Microsoft.Extensions.DiagnosticAdapter.dll": {}
         }
       },
+      "Microsoft.Extensions.Logging.Abstractions/3.1.0": {},
       "Microsoft.Extensions.ObjectPool/3.1.0": {},
       "Microsoft.Extensions.Options/3.1.0": {
         "dependencies": {
@@ -733,7 +759,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.AspNetCore.Authorization/5.0.0.0": {
+      "Microsoft.AspNetCore.Authorization.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Authorization.dll": {}
         },
@@ -943,7 +969,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.AspNetCore.Metadata/5.0.0.0": {
+      "Microsoft.AspNetCore.Metadata.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Metadata.dll": {}
         },
@@ -1339,7 +1365,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.Extensions.Logging.Abstractions/5.0.0.0": {
+      "Microsoft.Extensions.Logging.Abstractions.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.Extensions.Logging.Abstractions.dll": {}
         },
@@ -2438,6 +2464,13 @@
       "path": "hotchocolate.aspnetcore/11.0.9",
       "hashPath": "hotchocolate.aspnetcore.11.0.9.nupkg.sha512"
     },
+    "HotChocolate.AspNetCore.Authorization/11.0.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8s4wzMCW9+FMkRClfod6xjgD68Jhx1oHY/0bPB89IdY/T9q1FU5jd+c5lrzV5gI9NC5+ExYkyyxa4Wpqb/V48Q==",
+      "path": "hotchocolate.aspnetcore.authorization/11.0.9",
+      "hashPath": "hotchocolate.aspnetcore.authorization.11.0.9.nupkg.sha512"
+    },
     "HotChocolate.Execution/11.0.9": {
       "type": "package",
       "serviceable": true,
@@ -2536,6 +2569,20 @@
       "path": "hotchocolate.validation/11.0.9",
       "hashPath": "hotchocolate.validation.11.0.9.nupkg.sha512"
     },
+    "Microsoft.AspNetCore.Authorization/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-R/0qFIu1m7jJFD0OuLIjLXC0uYQxFwwW7ylVvGgUPUpOJJK0bKJjfrDu20kY1Yw0hy9ejZYZEdUZHRm3ei0+3w==",
+      "path": "microsoft.aspnetcore.authorization/3.1.0",
+      "hashPath": "microsoft.aspnetcore.authorization.3.1.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Metadata/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZiNCjglz4kR2OGElM2u/S6cS1ArAxE6lP4BeniCZcr6l+ACzslKgcPGOTY8/Glppx6CDzMKfmyqV+VbFh5CyjQ==",
+      "path": "microsoft.aspnetcore.metadata/3.1.0",
+      "hashPath": "microsoft.aspnetcore.metadata.3.1.0.nupkg.sha512"
+    },
     "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
       "type": "package",
       "serviceable": true,
@@ -2563,6 +2610,13 @@
       "sha512": "sha512-X0qJHZYcHx1Mz2vwJabUEyb2RmhtP8shyeZyV+BvPd9z9KDHxHRYrTy1YK66NEfoOXlMrGcQ52mLWOVw4XW2IQ==",
       "path": "microsoft.extensions.diagnosticadapter/3.1.0",
       "hashPath": "microsoft.extensions.diagnosticadapter.3.1.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Logging.Abstractions/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jjo4YXRx6MIpv6DiRxJjSpl+sPP0+5VW0clMEdLyIAz44PPwrDTFrd5PZckIxIXl1kKZ2KK6IL2nkt0+ug2MQg==",
+      "path": "microsoft.extensions.logging.abstractions/3.1.0",
+      "hashPath": "microsoft.extensions.logging.abstractions.3.1.0.nupkg.sha512"
     },
     "Microsoft.Extensions.ObjectPool/3.1.0": {
       "type": "package",
@@ -2699,7 +2753,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.AspNetCore.Authorization/5.0.0.0": {
+    "Microsoft.AspNetCore.Authorization.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -2874,7 +2928,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.AspNetCore.Metadata/5.0.0.0": {
+    "Microsoft.AspNetCore.Metadata.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -3204,7 +3258,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.Extensions.Logging.Abstractions/5.0.0.0": {
+    "Microsoft.Extensions.Logging.Abstractions.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

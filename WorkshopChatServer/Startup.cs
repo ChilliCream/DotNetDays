@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -22,13 +23,24 @@ namespace WorkshopChatServer
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddHttpContextAccessor();
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
+            services.AddAuthorization();
+            
             services.AddSingleton<IUserRepository, UserRepository>();
             services.AddSingleton<IChannelRepository, ChannelRepository>();
             services.AddSingleton<IWorkspaceRepository, WorkspaceRepository>();
             services.AddSingleton<IMessageRepository, MessageRepository>();
+
+            services.AddScoped<AuthorByMessageIdDataLoader>();
+            services.AddScoped<ChannelByWorkspaceDataLoader>();
+            services.AddScoped<MessageByChannelDataloader>();
+
+            services.AddHttpResultSerializer<CustomHttpResultSerializer>();
             
             services
                 .AddGraphQLServer()
+                .AddAuthorization()
                 .AddQueryType(descriptor => descriptor.Name("Query"))
                     .AddType<WorkspaceQuery>()
                     .AddType<UserQuery>()
@@ -44,7 +56,9 @@ namespace WorkshopChatServer
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app.UseRouting();
-
+            app.UseAuthentication();
+            app.UseAuthorization();
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGraphQL();
