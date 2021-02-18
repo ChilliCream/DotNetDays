@@ -1,26 +1,31 @@
+using System;
 using System.Threading.Tasks;
 using HotChocolate;
 using HotChocolate.Types;
+using HotChocolate.Subscriptions;
 using WorkshopChatServer.Repositories.Interfaces;
-using System;
 
 namespace WorkshopChatServer.Types.Message
 {
     [ExtendObjectType("Mutation")]
     public class MessagesMutation
     {
-        public Task<SimpleMessage> PostSimpleMessage(
+        public async Task<SimpleMessage> PostSimpleMessage(
             [Service] IMessageRepository messageRepository,
-            String channelName, String userName,
-            String message)
+            [Service] ITopicEventSender  eventSender,
+            string channelName,
+            string userName,
+            string message)
         {
-            return messageRepository.PostSimpleMessage(channelName,userName,message);
+            var result = await messageRepository.PostSimpleMessage(channelName, userName, message);
+            await eventSender.SendAsync(channelName, result);
+            return result;
         }
 
-        public Task<Thread> PostRespone(
+        public Task<Thread> PostResponse(
             [Service] IMessageRepository messageRepository, Guid messageId, string message)
-            {
-                return messageRepository.ReplyToMessage(messageId,message);
-            }
+        {
+            return messageRepository.ReplyToMessage(messageId, message);
+        }
     }
 }

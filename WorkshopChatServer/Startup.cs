@@ -26,7 +26,7 @@ namespace WorkshopChatServer
             services.AddHttpContextAccessor();
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
             services.AddAuthorization();
-            
+
             services.AddSingleton<IUserRepository, UserRepository>();
             services.AddSingleton<IChannelRepository, ChannelRepository>();
             services.AddSingleton<IWorkspaceRepository, WorkspaceRepository>();
@@ -37,28 +37,33 @@ namespace WorkshopChatServer
             services.AddScoped<MessageByChannelDataloader>();
 
             services.AddHttpResultSerializer<CustomHttpResultSerializer>();
-            
+
             services
                 .AddGraphQLServer()
                 .AddAuthorization()
                 .AddQueryType(descriptor => descriptor.Name("Query"))
-                    .AddType<WorkspaceQuery>()
-                    .AddType<UserQuery>()
+                    .AddTypeExtension<WorkspaceQuery>()
+                    .AddTypeExtension<UserQuery>()
                 .AddMutationType(descriptor => descriptor.Name("Mutation"))
-                    .AddType<WorkspaceMutation>()
-                    .AddType<MessagesMutation>()
-                    .AddType<ChannelMutation>()
-                    .AddType<UserMutation>()
-                .AddType<WorkspaceChannelExtension>();
+                    .AddTypeExtension<WorkspaceMutation>()
+                    .AddTypeExtension<MessagesMutation>()
+                    .AddTypeExtension<ChannelMutation>()
+                    .AddTypeExtension<UserMutation>()
+                .AddSubscriptionType(d => d.Name("Subscription"))
+                    .AddTypeExtension<MessageSubscriptions>()
+                .AddTypeExtension<WorkspaceChannelExtension>()
+                .AddInMemorySubscriptions();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseWebSockets();
+
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
-            
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGraphQL();
