@@ -1,3 +1,5 @@
+using WorkshopChatServer.Repositories.Interfaces;
+using HotChocolate;
 using WorkshopChatServer.Types.Channels;
 
 namespace WorkshopChatServer.Types.Workspaces
@@ -6,10 +8,10 @@ namespace WorkshopChatServer.Types.Workspaces
     {
         public string Name { get; set; }
 
-        public async Task<UserNamespace.Channel> Channel(
-            [Service] IChannelRepository channelRepository
+        public async Task<Channel> Channel(
+            [Service] IChannelRepository channelRepository, string workspaceName
         ) {
-            return await channelRepository.GetChannelByWorkspace();
+            return await channelRepository.GetChannelByWorkspace(workspaceName);
         }
     }
 }
