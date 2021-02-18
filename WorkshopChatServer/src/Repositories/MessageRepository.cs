@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Dapper;
 using Npgsql;
 using WorkshopChatServer.Repositories.Interfaces;
-using WorkshopChatServer.Types.Messages;
+using WorkshopChatServer.Types.Message;
 
 namespace WorkshopChatServer.Repositories
 {
@@ -211,7 +211,7 @@ namespace WorkshopChatServer.Repositories
         }
 
 
-        private async Task<Message> GetMessageById(Guid messageId)
+        private async Task<IMessage> GetMessageById(Guid messageId)
         {
             await using var conn = new NpgsqlConnection(ConnString);
             await conn.OpenAsync();

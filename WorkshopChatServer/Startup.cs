@@ -7,6 +7,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using WorkshopChatServer.Repositories;
+using WorkshopChatServer.Repositories.Interfaces;
+using WorkshopChatServer.Types.Channels;
+using WorkshopChatServer.Types.Message;
+using WorkshopChatServer.Types.User;
 using WorkshopChatServer.Types.Workspaces;
 
 namespace WorkshopChatServer
@@ -17,14 +22,21 @@ namespace WorkshopChatServer
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<IUserRepository, UserRepository>();
+            services.AddSingleton<IChannelRepository, ChannelRepository>();
+            services.AddSingleton<IWorkspaceRepository, WorkspaceRepository>();
+            services.AddSingleton<IMessageRepository, MessageRepository>();
+            
             services
                 .AddGraphQLServer()
                 .AddQueryType(descriptor => descriptor.Name("Query"))
                     .AddType<WorkspaceQuery>()
+                    .AddType<UserQuery>()
                 .AddMutationType(descriptor => descriptor.Name("Mutation"))
                     .AddType<WorkspaceMutation>()
                     .AddType<MessagesMutation>()
-                .AddUnionType(descriptor => descriptor.Name("Message"))
+                    .AddType<ChannelMutation>()
+                    .AddType<UserMutation>()
                 .AddType<WorkspaceChannelExtension>();
         }
 

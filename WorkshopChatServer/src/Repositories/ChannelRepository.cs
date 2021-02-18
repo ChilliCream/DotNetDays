@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Dapper;
 using Npgsql;
 using WorkshopChatServer.Repositories.Interfaces;
-using WorkshopChatServer.Types.Channel;
+using WorkshopChatServer.Types.Channels;
 
 namespace WorkshopChatServer.Repositories
 {

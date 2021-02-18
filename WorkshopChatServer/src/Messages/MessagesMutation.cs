@@ -22,6 +22,5 @@ namespace WorkshopChatServer.Types.Message
             {
                 return messageRepository.ReplyToMessage(messageId,message);
             }
-        )
     }
 }

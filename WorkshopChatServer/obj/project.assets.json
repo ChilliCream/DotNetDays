@@ -1239,23 +1239,23 @@
     ]
   },
   "packageFolders": {
-    "/Users/michael/.nuget/packages/": {},
+    "/Users/fred/.nuget/packages/": {},
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/michael/local/DotNetDays/WorkshopChatServer/WorkshopChatServer.csproj",
+      "projectUniqueName": "/Users/fred/projects/open-source/hotchocolate/live-workshop/DotNetDays/WorkshopChatServer/WorkshopChatServer.csproj",
       "projectName": "WorkshopChatServer",
-      "projectPath": "/Users/michael/local/DotNetDays/WorkshopChatServer/WorkshopChatServer.csproj",
-      "packagesPath": "/Users/michael/.nuget/packages/",
-      "outputPath": "/Users/michael/local/DotNetDays/WorkshopChatServer/obj/",
+      "projectPath": "/Users/fred/projects/open-source/hotchocolate/live-workshop/DotNetDays/WorkshopChatServer/WorkshopChatServer.csproj",
+      "packagesPath": "/Users/fred/.nuget/packages/",
+      "outputPath": "/Users/fred/projects/open-source/hotchocolate/live-workshop/DotNetDays/WorkshopChatServer/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/michael/.nuget/NuGet/NuGet.Config"
+        "/Users/fred/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -1310,7 +1310,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.103/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.101/RuntimeIdentifierGraph.json"
       }
     }
   }
